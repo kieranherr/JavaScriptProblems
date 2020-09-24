@@ -11,3 +11,25 @@ function fibonacci(){
     }
 }
 fibonacci();
+
+function stringReverse(){
+    let userinput = prompt("What is the string you would like to reverse?");
+    var reverseString = "";
+    for(let i = userinput.length - 1; i >= 0; i--){
+        reverseString = reverseString+userinput[i];
+    }
+    alert(reverseString)
+}
+stringReverse();
+
+function capLetter(){
+    let userinput = prompt("Give me a couple of words");
+    userinput = userinput.toLowerCase();
+    var splitString = userinput.split(' ');
+    for(let i = 0; i < splitString.length; i++){
+        splitString[i] = splitString[i].charAt(0).toUpperCase() + splitString[i].substring(1)
+    }
+    splitString = splitString.join(' ');
+    alert(splitString);
+}
+capLetter();
