@@ -51,26 +51,44 @@
 // }
 // compressString();
 
-function palindrome(){
-    let userinput = prompt("Give me a word and i will tell you if it is a palindrome!");
-    var reverse = "";
-    for(let i = userinput.length - 1; i >= 0; i--){
-        reverse = reverse+userinput[i];
-    }
-    count = 0;
-    for(let i = 0; i < userinput.length; i++){
-        if(userinput[i] == reverse[i]){
-            count++;
+// function palindrome(){
+//     let userinput = prompt("Give me a word and i will tell you if it is a palindrome!");
+//     var reverse = "";
+//     for(let i = userinput.length - 1; i >= 0; i--){
+//         reverse = reverse+userinput[i];
+//     }
+//     count = 0;
+//     for(let i = 0; i < userinput.length; i++){
+//         if(userinput[i] == reverse[i]){
+//             count++;
+//         }
+//         else{
+//             continue;
+//         }
+//     }
+//     if(count == userinput.length){
+//         alert("It is a palindrome! :)");
+//     }
+//     else{
+//         alert("It is not a palindrome! :(");
+//     }
+// }
+// palindrome();
+
+function primeNumbers(){
+    alert("--- Primes between 0 and 100 ---");
+    let isPrime = new Boolean(true);
+    for(let i = 0; i < 100; i++){
+        for(let j = 0; j <=100 ; j++){
+            if(i != j && i % j == 0){
+                isPrime = false;
+                break;
+            }
         }
-        else{
-            continue;
+        if(isPrime){
+            alert("Prime: " + i);
         }
-    }
-    if(count == userinput.length){
-        alert("It is a palindrome! :)");
-    }
-    else{
-        alert("It is not a palindrome! :(");
+        isprime = true;
     }
 }
-palindrome();
+primeNumbers();
