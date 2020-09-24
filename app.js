@@ -33,3 +33,20 @@ function capLetter(){
     alert(splitString);
 }
 capLetter();
+
+function compressString(){
+    let userinput = prompt("Input a string of random letters please.");
+    var compressedString = '';
+    var count = 0;
+    for(let i = 0; i < userinput.length; i++){
+        count++;
+        if(userinput[i] != userinput[i+1]){
+            compressedString = compressedString + userinput[i] + count;
+            count = 0;
+        }
+        
+        
+    }
+    alert(compressedString);
+}
+compressString();
